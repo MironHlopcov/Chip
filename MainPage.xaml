@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Chip.MainPage"
+             xmlns:controls="clr-namespace:Chip.Controls">
+
+    <ScrollView>
+        <VerticalStackLayout
+            x:Name="RootLayout"
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+           
+          
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                BorderColor="Azure"
+                BorderWidth="2"
+                BackgroundColor="Transparent"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" 
+                CornerRadius="14"
+                RotationX="0"
+                RotationY="0"
+                ImageSource="dotnet_bot.png"
+                HeightRequest="50">
+            </Button>
+            
+            <controls:Chip
+                x:Name="MyChip"
+                StrokeShape="RoundRectangle 40,0,0,40"
+                BackgroundColor="Azure"
+                Padding="5"
+                Text="CliCk"
+                HorizontalOptions="Start"
+                ShowCloseButton="True">
+            </controls:Chip>
+           
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
