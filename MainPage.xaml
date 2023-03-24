@@ -4,21 +4,22 @@
              x:Class="Chip.MainPage"
              xmlns:controls="clr-namespace:Chip.Controls">
 
-    <ScrollView>
-        <VerticalStackLayout
+    <StackLayout>
+        <ScrollView>
+            <VerticalStackLayout
             x:Name="RootLayout"
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
+                <Image
                 Source="dotnet_bot.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
-           
-          
-            <Button
+
+
+                <Button
                 x:Name="CounterBtn"
                 Text="Click me"
                 BorderColor="Azure"
@@ -32,20 +33,115 @@
                 RotationY="0"
                 ImageSource="dotnet_bot.png"
                 HeightRequest="50">
-            </Button>
-            
+                </Button>
+
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+
+        <FlexLayout x:Name="flexLayout"
+                        AlignContent="Start" 
+                        AlignItems="Start" 
+                        Direction="Row"
+                        Wrap="Wrap">
             <controls:Chip
                 x:Name="MyChip"
+                StrokeShape="RoundRectangle 10,10,10,10"
+                BackgroundColor="Black"
+                Padding="5"
+                Text="CliCk"
+                HorizontalOptions="Start"
+                ShowCloseButton="True">
+                <controls:Chip.Stroke>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="Orange"
+                          Offset="0.1" />
+                        <GradientStop Color="Brown"
+                          Offset="1.0" />
+                    </LinearGradientBrush>
+                </controls:Chip.Stroke>
+            </controls:Chip>
+            <controls:Chip
+                x:Name="MyChip1"
                 StrokeShape="RoundRectangle 40,0,0,40"
                 BackgroundColor="Azure"
+                Stroke="#C49B33"
                 Padding="5"
                 Text="CliCk"
                 HorizontalOptions="Start"
                 ShowCloseButton="True">
             </controls:Chip>
-           
-            
-        </VerticalStackLayout>
-    </ScrollView>
+            <controls:Chip
+                x:Name="MyChip2"
+                StrokeShape="RoundRectangle 40,0,0,40"
+                BackgroundColor="Azure"
+                Stroke="#C49B33"
+                Padding="5"
+                Text="CliCk"
+                HorizontalOptions="Start"
+                ShowCloseButton="True">
+            </controls:Chip>
+            <controls:Chip
+                x:Name="MyChip3"
+                StrokeShape="RoundRectangle 40,0,0,40"
+                BackgroundColor="Azure"
+                Stroke="#C49B33"
+                Padding="5"
+                Text="CliCk"
+                HorizontalOptions="Start"
+                ShowCloseButton="True">
+            </controls:Chip>
+            <controls:Chip
+                x:Name="MyChip4"
+                StrokeShape="RoundRectangle 40,0,0,40"
+                BackgroundColor="Azure"
+                Stroke="#C49B33"
+                Padding="5"
+                Text="CliCk"
+                HorizontalOptions="Start"
+                ShowCloseButton="True">
+            </controls:Chip>
+            <controls:Chip
+                x:Name="MyChip5"
+                StrokeShape="RoundRectangle 40,0,0,40"
+                BackgroundColor="Azure"
+                Stroke="#C49B33"
+                Padding="5"
+                Text="CliCk"
+                HorizontalOptions="Start"
+                ShowCloseButton="True">
+            </controls:Chip>
+            <controls:Chip
+                x:Name="MyChip6"
+                StrokeShape="RoundRectangle 40,0,0,40"
+                BackgroundColor="Azure"
+                Stroke="#C49B33"
+                Padding="5"
+                Text="CliCk"
+                HorizontalOptions="Start"
+                ShowCloseButton="True">
+            </controls:Chip>
+
+        </FlexLayout>
+
+        <controls:ChipConteiner
+            x:Name="ChipCont">
+          
+        </controls:ChipConteiner>
+
+    </StackLayout>
+
 
 </ContentPage>
+
+
+<!--<controls:ChipConteiner.Chip
+                StrokeShape="RoundRectangle 40,0,0,40"
+                BackgroundColor="Azure"
+                Stroke="#C49B33"
+                Padding="5"
+                Text="CliCk"
+                HorizontalOptions="Start"
+                ShowCloseButton="True"/>-->

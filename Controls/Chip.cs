@@ -82,6 +82,7 @@ public class Chip : Border
 
     public Chip()
     {
+        var stack= new StackLayout();
         var grid = new Grid()
         {
             RowDefinitions =
@@ -131,7 +132,8 @@ public class Chip : Border
 
         //border.Content = grid;
         //Content = border;
-        Content = grid;
+        stack.Add(grid);
+        Content = stack;
 
         void Button_Clicked(object sender, EventArgs e)
         {
@@ -147,10 +149,15 @@ public class Chip : Border
             button.Padding = new Thickness(0, 0, 5, 0);
             selectionDetectImage.IsVisible = true;
             closeImage.IsVisible = false;
-            if(this.BackgroundColor!=null)
+            //Stroke = new SolidColorBrush(this.BackgroundColor);
+
+            if (this.BackgroundColor!=null)
                 this.BackgroundColor = this.BackgroundColor.WithAlpha(0.3F);
-            if (isChecked != IsChacked)
-                IsChacked = true;
+
+            //if (isChecked != IsChacked)
+            //    IsChacked = true;
+
+           
         }
         else
         {
@@ -160,8 +167,8 @@ public class Chip : Border
                 closeImage.IsVisible = true;
             if (this.BackgroundColor != null)
                 this.BackgroundColor = this.BackgroundColor.WithAlpha(1F);
-            if (isChecked != IsChacked)
-                IsChacked = false;
+            //if (isChecked != IsChacked)
+            //    IsChacked = false;
         }
     }
 }

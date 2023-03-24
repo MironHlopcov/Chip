@@ -2,13 +2,14 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
 	public MainPage()
 	{
 		InitializeComponent();
 		MyChip.CloseButtonClicked += MyChip_CloseButtonCliced;
         MyChip.Checkd += MyChip_Checkd;
+        var lis = new List<IView>();
+        lis.Add(MyChip);
+        ChipCont.ChipList = lis;
     }
 
     private void MyChip_Checkd(object sender, EventArgs e)
@@ -23,7 +24,7 @@ public partial class MainPage : ContentPage
 
     private void MyChip_CloseButtonCliced(object sender, EventArgs e)
     {
-        RootLayout.Children.Remove(MyChip);
+        //RootLayout.Children.Remove(MyChip);
     }
 
     private void ChipButton_Clicked(object sender, EventArgs e)
